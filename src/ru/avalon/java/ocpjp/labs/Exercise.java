@@ -32,7 +32,18 @@ public interface Exercise {
      * @return Экземпляр класса, реализующего задание
      */
     static Exercise create(String[] args) {
-        // TODO(Студент): Реализовать метод create интерфейса Exercise
-        throw new UnsupportedOperationException("Not implemented!");
+        if (args[0].equalsIgnoreCase("Inheritance")) {
+            return new Inheritance();
+        }
+
+        if (args[0].equalsIgnoreCase("TwoDimensionalArrays")) {
+            return new TwoDimensionalArrays();
+        }
+
+        if (args[0].equalsIgnoreCase("OneDimensionalArrays")) {
+            return new OneDimensionalArrays();
+        }
+
+        return null;
     }
 }
